@@ -1,0 +1,31 @@
+<!doctype html>
+<html
+        lang="en"
+        data-th-fragment="parent(content,title)"
+        class = "light">
+<!--        xmlns:th="http://www.thymeleaf.org">-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+          <link rel="stylesheet" data-th-href="@{'/css/output.css'}">
+          <link href="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.css" rel="stylesheet" />
+    
+    <title data-th-replace="${title}">Base Page </title>
+</head>
+<body class = "bg-gray-100 dark:bg-gray-900 dark:text-white" >
+        
+         <div data-th-replace="~{user/usernavbar :: usernavbar}"></div>
+
+    <div style="padding-left: 270px;padding-top: 70px; padding-right: 6px;">
+
+        <div data-th-replace="${content}">Base Page</div>
+
+    </div>
+
+         
+
+
+</body>
+</html>

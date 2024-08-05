@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en" data-th-replace="~{base :: parent(~{::.about},~{:: title})}">
+<head>
+    <title>Signup</title>
+</head>
+<body>
+<div class = "about">
+    <div class="flex justify-center mt-2">
+        <div
+                class="w-full max-w-md p-3 bg-white border border-gray-200 rounded-lg shadow sm:p-6 md:p-6 dark:bg-gray-800 dark:border-gray-700"
+        >
+            <form class="space-y-4"
+                  data-th-action="@{'/do-processing'}"
+                  data-th-object = "${userform}"
+                  method="post">
+
+                <div data-th-replace="message :: messagebox"></div>
+
+                <h5 class="text-xl font-medium text-gray-900 dark:text-white">
+                    Sign up
+                </h5>
+
+                <div>
+                    <label
+                            for="name"
+                            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                    >Name</label
+                    >
+                    <input
+                            data-th-field="*{name}"
+                            type="text"
+                            id="name"
+                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                            placeholder="name"
+                            required
+                    />
+                </div>
+
+                <div>
+                    <label
+                            for="email"
+                            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                    >Email</label
+                    >
+                    <input
+                            type="email"
+                            data-th-field="*{email}"
+                            id="email"
+                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                            placeholder="name@xyz.com"
+                            required
+                    />
+                </div>
+                <div>
+                    <label
+                            for="password"
+                            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                    >New password</label
+                    >
+                    <input
+                            type="password"
+                            data-th-field="*{password}"
+                            id="password"
+                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                            required
+                    />
+                </div>
+
+                <div>
+                    <label
+                            for="phone"
+                            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                    >Contact number</label
+                    >
+                    <input
+                            type="text"
+                            data-th-field="*{phoneNumber}"
+                            id="phone"
+                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                            required
+                    />
+                </div>
+
+                <div>
+                    <label
+                            for="about"
+                            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                    >Write about yourself</label
+                    >
+                    <textarea
+                            id="about"
+                            data-th-field="*{about}"
+                            rows="4"
+                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                            placeholder="Write here..."
+                    ></textarea>
+                </div>
+
+                <div class="flex justify-center space-x-2">
+                    <button
+                            type="submit"
+                            class=" text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                    >
+                        Sign up
+                    </button>
+
+                    <button
+                            type="reset"
+                            class=" text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-800"
+                    >
+                        Reset
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>
